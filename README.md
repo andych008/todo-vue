@@ -20,6 +20,8 @@ npm run build --report
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
+https://www.youtube.com/watch?v=C-n0ZWSTsUc&list=PLO5e_-yXpYLD87yPeyNUOJK02GhOFHVNd&index=2#t=18.274116
+
 ## Webpack 是什么？
 
 Webpack 是一个模块打包工具。在开发中，它把一堆文件中每个都作为一个模块处理，找出它们间的依赖关系，并打包成待发布的静态资源。
