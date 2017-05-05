@@ -11,12 +11,14 @@
 </template>
 
 <script>
+//import Store from '@/libs/store'
+import Store from '../libs/store'
 export default {
   name: 'todo',
   data() {
     return {
       title: 'This is a todo list',
-      items: [],
+      items: Store.fetch(),
       newItem:''
     }
   },
@@ -28,6 +30,15 @@ export default {
       console.info(this.newItem);
       this.items.push({label:this.newItem, isFinished:false});
       this.newItem='';
+    }
+  },
+  watch: {
+    items: {
+      handler(val, oldVal) {
+//        console.log(val, oldVal)
+        Store.save(val)
+      },
+      deep: true
     }
   }
 }
