@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <h1>{{title}}</h1>
+    <input type="text" v-model="newItem" @keyup.enter="addNew">
     <ul>
       <li v-for="item in items" :class="{finished: item.isFinished}" @click="toggleFinish(item)">
         {{item.label}}
@@ -15,15 +16,18 @@ export default {
   data() {
     return {
       title: 'This is a todo list',
-      items: [
-        {label:"todo1", isFinished:true},
-        {label:"todo2", isFinished:false},
-      ]
+      items: [],
+      newItem:''
     }
   },
   methods: {
     toggleFinish(item) {
       item.isFinished=!item.isFinished;
+    },
+    addNew() {
+      console.info(this.newItem);
+      this.items.push({label:this.newItem, isFinished:false});
+      this.newItem='';
     }
   }
 }
