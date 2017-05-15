@@ -9,6 +9,8 @@
       <br>
       <router-link to="/">Home</router-link>
       <router-link to="/todo">Todo</router-link>
+      <br>
+      <router-link to="/mytest">MyTest</router-link>
     </p>
     <router-view></router-view>
   </div>
