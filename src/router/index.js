@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from '@/views/Hello'
 import Todo from '@/views/Todo'
+import MyTest from '@/views/MyTest'
 
 Vue.use(Router)
 
@@ -29,6 +30,10 @@ export default new Router({
     {
       path: '/user/:id',
       component: User
+    },
+    {
+      path: '/mytest',
+      component: MyTest
     }
   ]
 })
